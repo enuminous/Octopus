@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OCTOPUS Forecast Record",
+  "type": "object",
+  "required": [
+    "machine_version",
+    "timestamp",
+    "system_id",
+    "target",
+    "probability"
+  ],
+  "properties": {
+    "machine_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "missing_fraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "distributed_contradiction": {
+      "type": "number"
+    },
+    "latent_proxy": {
+      "type": "number"
+    }
+  }
+}
